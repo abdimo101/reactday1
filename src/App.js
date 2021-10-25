@@ -3,7 +3,7 @@ import './App.css';
 import obj from './file2';
 import { males } from './file2';
 import { females } from './file2';
-
+import MultiWelcome from './file3';
 
 //function Persons(props){
  // const {males, females} = props;
@@ -26,6 +26,7 @@ console.log(bothGendersArr)
   <p>{firstName}</p>
   <p>{email}</p> 
   <p>{bothGendersArr}</p>
+  <h2>Ex 3</h2><MultiWelcome/>
   </div>
     );
 }
