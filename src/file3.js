@@ -6,8 +6,8 @@ function Welcome(props) {
   }
 
 function WelcomePerson(props){
-    
-    return <h1>Hello, {props.persons.firstName}, {props.persons.lastName}, {props.persons.email}</h1>
+    const {firstName, lastName, email} = props.persons;
+    return <h1>Hello, {firstName}, {lastName}, {email}</h1>
 }  
   
   function MultiWelcome() {
@@ -16,9 +16,10 @@ function WelcomePerson(props){
         <Welcome name="Sara" />
         <Welcome name="Cahal" />
         <Welcome name="Edith" />
-        <WelcomePerson persons = {persons[0]} />
+       {/* <WelcomePerson persons = {persons[0]} />
         <WelcomePerson persons = {persons[1]} />
-        <WelcomePerson persons = {persons[2]} />
+        <WelcomePerson persons = {persons[2]} /> */}
+        {persons.map((p)=> <WelcomePerson persons = {p}/>)}
     
       </div>
     );
